@@ -1,16 +1,16 @@
 // NVD YMD
 // Copyright (C) 2025, Nikolay Dudkin
-   
+//
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
 // to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 // copies of the Software, and to permit persons to whom the Software is
 // furnished to do so, subject to the following conditions:
-// 
+//
 // The above copyright notice and this permission notice shall be included in all
 // copies or substantial portions of the Software.
-// 
+//
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 // IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -89,7 +89,7 @@ inline void c(char *s, unsigned long n, unsigned long d)
 			c(s, m10K(y) + m100(m) + d, 8);
 			c(s + 8, m10K(hh) + m100(mn) + sc, 6);
 
-			_asm
+			__asm
 			{
 				lea dx, s;
 				mov ah, 9h;
@@ -130,7 +130,7 @@ inline void c(char *s, unsigned long n, unsigned long d)
 
 			c(s, m10K(y) + m100(m) + d, 8);
 
-			_asm
+			__asm
 			{
 				lea dx, s;
 				mov ah, 9h;
